@@ -51,29 +51,37 @@ Este proyecto implementa una aplicación de chatbot, que el usuario haga cualqui
 
 
 ## Requisitos para la Ejecución.
-1. Clonar el proyecto con el siguiente comando.
-2. Instalar dependencias: Ejecuta el siguiente comando en tu terminal para instalar las dependencias necesarias:
-3. Ejecutar la aplicación: Para iniciar la aplicación de chatbot, ejecuta:
-4. Salir de la aplicación: Si deseas salir de la aplicación, simplemente escribe salir y presiona Enter.
 
-## Ejemplos de Ejecución.
+1. **Clonar el proyecto con el siguiente comando independiente del sistema operativo**.
+2. **Verifica si está todo instalado, sino falta uno de ellos hay que revisar con los comandos que salieron anteriormente como las librerías, crear el entorno, activación del entorno, entre otros**.
+3. **Si el usuario desea andar el proyecto tiene que ejecutar el siguiente comando:**
 
-1. Al ejecutar el script, verás una interfaz de línea de comandos donde puedes escribir tus preguntas. Ejemplo de ejecución:
-  
-   ![u7](https://github.com/user-attachments/assets/cacdc693-78eb-46de-b3c5-ee81989569fc)
+   ``` bash
+   python app.py
+
+4. **Programa funcionando, pero no responderá correctamente las preguntas, ya que este chat-gpt-2, no tiene la exactitud de responder las preguntas.**
+
+   ![U23](https://github.com/user-attachments/assets/3dd40ddc-e661-4821-b327-78eac8bccb35)
+
    
-# Modelo USADO.
+5. **Salir de la aplicación: Si deseas salir de la aplicación, simplemente escribe salir y presiona Enter.**
 
-## GPT-2
-
-El modelo utilizado en este proyecto es GPT-2 de Hugging Face, que es un modelo de lenguaje autoregresivo basado en la arquitectura de transformadores. Este modelo ha sido entrenado con grandes cantidades de texto en inglés y es capaz de generar texto coherente y relevante a partir de un prompt dado.
 
 #### Parámetros utilizados en la generación:
 
-1. max_length: 150 caracteres máximo en la respuesta.
-2. num_return_sequences: 1 secuencia de respuesta generada.
-3. temperature: 0.6 (ajuste para respuestas más coherentes).
-4. top_k: 10 (limitación del top-k para mejorar la coherencia de las respuestas).
-5. top_p: 0.9 (probabilidad acumulada para la diversidad).
-6. no_repeat_ngram_size: 2 (previene la repetición de n-gramas).
-7. do_sample: True (habilita el muestreo para generar respuestas más diversas).
+El método `model.generate` controla cómo el modelo produce texto basado en una entrada. A continuación, se describen los parámetros utilizados:
+
+- **`max_length`**: Longitud máxima de la respuesta generada, medida en tokens (palabras o fragmentos de palabras).
+- **`num_return_sequences`**: Número de respuestas generadas para cada entrada. Aquí se genera únicamente una.
+- **`temperature`**: Ajusta la aleatoriedad de la salida. 
+- **`top_k`**: Limita las palabras consideradas por el modelo a las 50 más probables en cada paso.
+- **`top_p`**: Activa el "nucleus sampling", que toma en cuenta solo las palabras más probables cuya suma de probabilidades sea ≤ 0.9.
+- **`no_repeat_ngram_size`**: Impide la repetición de patrones consecutivos con 2 o más palabras.
+- **`do_sample`**: Activa el muestreo aleatorio, permitiendo respuestas más variadas.
+
+#### Ejemplo.
+
+![U24](https://github.com/user-attachments/assets/4377140a-b79f-42c8-89b0-f3c0f01e0b78)
+
+
+
