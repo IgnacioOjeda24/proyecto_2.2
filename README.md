@@ -78,6 +78,7 @@ El método `model.generate` controla cómo el modelo produce texto basado en una
 - **`top_p`**: Activa el "nucleus sampling", que toma en cuenta solo las palabras más probables cuya suma de probabilidades sea ≤ 0.9.
 - **`no_repeat_ngram_size`**: Impide la repetición de patrones consecutivos con 2 o más palabras.
 - **`do_sample`**: Activa el muestreo aleatorio, permitiendo respuestas más variadas.
+- **NOTA: Lo hice por defecto para no complicar el programa y no decía específicamente lo que se pedía.**
 
 #### Ejemplo.
 
