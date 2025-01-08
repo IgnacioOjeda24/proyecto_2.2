@@ -2,25 +2,53 @@
 
 Instrucción:
 Huggingface Api
-Proyecto 1 : Utilizando un api de hugginface de un modelo llm crea una aplicación donde el usuario pueda realizar preguntas y el modelo le responda, en el readme especifica el modelo usado y los parámetros en la petición junto con un ejemplo de uso.
+Proyecto 1 : Utilizando un api de hugginface de un modelo LLM crea una aplicación donde el usuario pueda realizar preguntas y el modelo le responda, en el readme especifica el modelo usado y los parámetros en la petición junto con un ejemplo de uso.
 
 ## Resumen del proyecto parte 2.
 
-Este proyecto implementa una aplicación de chatbot que utiliza un modelo de lenguaje (LLM) de Hugging Face, específicamente GPT-2, para responder preguntas en tiempo real. El modelo está entrenado en inglés, pero también puede generar respuestas en otros idiomas, como el español, aunque con menor precisión.
+Este proyecto implementa una aplicación de chatbot, que el usuario haga cualquier pregunta con el modelo LLM que se llama openai-community/gpt2, responde de manera no exacta, pero funciona el código. Lo ideal que se haga preguntas en inglés, ya que tiene respuestas con más precisión respecto a los demás idiomas.
 
 ## Requisitos para la Ejecución.
 
-1. Python 3.6 o superior.
-2. Pip para la instalación de dependencias.
-3. Bibliotecas necesarias:
+1. **Python 3.8 a 3.10 independiente del sistema operativo que tenga el usuario como: Windows, Linux o Mac**.
+2. **Visual studio instalado independiente del sistema operativo que tenga el usuario como: Windows, Linux o Mac.**
+3. **Instalar el siguiente comando**
+   
+   ```bash
+   pip install transformers torch requests
+
+4. **Librerías instaladas en python**
 
    - `transformers: para interactuar con los modelos de Hugging Face`
    - `torch: para la ejecución de los modelos.`
    - `requests: para enviar peticiones HTTP si se decide utilizar la API de Hugging Face`
-   - `comando:`
-  
-      ```bash
-      pip install transformers torch requests
+
+5. **Librerías importadas en foto**
+
+   ![U20](https://github.com/user-attachments/assets/1de1414b-b5be-4c7b-89e6-8ce169a6f6e2)
+
+6. **Antes de correr el programa, instalar los siguientes comandos:**
+
+   Para crear el entorno virtual en visual studio code.
+
+   ``` bash
+   python -m venv nombre_propio_de_entorno virtual
+
+   Ejemplo:
+
+   ``` bash
+   python -m venv env2
+
+   Para activar el entorno virtual en visual studio code.
+
+   ``` bash
+   \nombre_propio_de_entorno virtual\Scripts\activate
+
+   Ejemplo:
+
+   ``` bash
+   \env2\Scripts\activate
+
 
 ## Requisitos para la Ejecución.
 1. Clonar el proyecto con el siguiente comando.
